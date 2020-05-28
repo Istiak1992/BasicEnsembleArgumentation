@@ -9,6 +9,8 @@
 
 <p>Import the library: </p>
 
-<code>from EnsArg import argumentation</code>
+![](images/c0.png)
 
-<p>Import necessary pacakages: </p>
+<p>Import additional pacakages: </p>
+
+![](images/c1.png)
