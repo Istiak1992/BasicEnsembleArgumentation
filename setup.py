@@ -27,7 +27,7 @@ setup(
     name='Basicenssembleargumentation',
     version='0.0.1',
     description='A basic argumentation process where the outcomes from different models can argue for generating a final output.',
-    long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
+    long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
     url='',
     author='Istiak Ahmed',
     author_email='istiak.uiu.bd@gmail.com',
