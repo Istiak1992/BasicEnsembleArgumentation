@@ -4,13 +4,11 @@ from setuptools import setup, find_packages
 with open('README.md') as f:
     long_desc = f.read()
 
-if sys.version_info < (3, 8):
-    print('EnsArg requires at least Python 3.5 to run reliably.')
+if sys.version_info < (3, 6):
+    print('EnsArg requires at least Python 3.6 to run reliably.')
 
 install_requires = [
     'matplotlib',
-    'numpy',
-    'pandas',
     'sklearn'
     
 ]
@@ -33,12 +31,12 @@ setup(
     author_email='istiak.uiu.bd@gmail.com',
     license='MIT',
     classifiers=classifiers,
-    keyword='ensembleargumentation',
+    keyword='ensemble learning, argumentation',
      project_urls={
         "Code": "https://github.com/Istiak1992/BasicEnsembleArgumentation/",
     },
     packages=find_packages(),
-    python_requires=">=3.8"
+    python_requires=">=3.6"
    
         
 
