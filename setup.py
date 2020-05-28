@@ -1,7 +1,7 @@
 import sys
 from setuptools import setup, find_packages
 
-with open('README.txt') as f:
+with open('README.md') as f:
     long_desc = f.read()
 
 if sys.version_info < (3, 8):
