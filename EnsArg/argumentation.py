@@ -66,68 +66,65 @@ def Argumentation(classifier, regressor):
     att_pos = []
     pos_val = []
 
-    for cmp in comp:
-        if cmp == True:
-            print('')
-        else:
-            if c2 > r2:
-                for i in range(0, ln, 1):
-                    if c1[i] != r1[i]:
-                        print(c1[i], 'Attack-->', r1[i])
-                        if c2 > 0.5:
-                            print('Accepted Argument: ', c1[i])
-                            arg_val.insert(i, c1[i])
+    
+    if c2 > r2:
+        for i in range(0, ln, 1):
+            if c1[i] != r1[i]:
+                print(c1[i], 'Attack-->', r1[i])
+                if c2 > 0.5:
+                    print('Accepted Argument: ', c1[i])
+                    arg_val.insert(i, c1[i])
 
-                        elif c2 < 0.5:
-                            print('Unaccepted Argument: ', c1[i])
-                            arg_val.insert(i, c1[i])
-                        elif c2 == 0.5:
-                            print('Undefined Argument: ', c1[i])
-                            arg_val.insert(i, c1[i])
-                    else:
-                        print('No Attack')
-                        att_pos.insert(i, i)
-                        pos_val.insert(i, c1[i])
+                elif c2 < 0.5:
+                    print('Unaccepted Argument: ', c1[i])
+                    arg_val.insert(i, c1[i])
+                elif c2 == 0.5:
+                    print('Undefined Argument: ', c1[i])
+                    arg_val.insert(i, c1[i])
+            else:
+                print('No Attack')
+                att_pos.insert(i, i)
+                pos_val.insert(i, c1[i])
 
-                break
+        
 
-            elif r2 > c2:
-                for i in range(0, ln, 1):
-                    if r1[i] != c1[i]:
-                        print(r1[i], 'Attack-->', c1[i])
-                        if c2 > 0.5:
-                            print('Accepted Argument: ', r1[i])
-                            arg_val.insert(i, r1[i])
-                        elif c2 < 0.5:
-                            print('Unaccepted Argument: ', r1[i])
-                            arg_val.insert(i, r1[i])
-                        elif c2 == 0.5:
-                            print('Undefined Argument: ', r1[i])
-                            arg_val.insert(i, r1[i])
-                    else:
-                        print('No Attack')
-                        att_pos.insert(i, i)
-                        pos_val.insert(i, r1[i])
-                break
+    elif r2 > c2:
+        for i in range(0, ln, 1):
+            if r1[i] != c1[i]:
+                print(r1[i], 'Attack-->', c1[i])
+                if c2 > 0.5:
+                    print('Accepted Argument: ', r1[i])
+                    arg_val.insert(i, r1[i])
+                elif c2 < 0.5:
+                    print('Unaccepted Argument: ', r1[i])
+                    arg_val.insert(i, r1[i])
+                elif c2 == 0.5:
+                    print('Undefined Argument: ', r1[i])
+                    arg_val.insert(i, r1[i])
+            else:
+                print('No Attack')
+                att_pos.insert(i, i)
+                pos_val.insert(i, r1[i])
+        
 
-            elif c2 == r2:
-                for i in range(0, ln, 1):
-                    if c1[i] != r1[i]:
-                        print(c1[i], 'Attack-->', r1[i])
-                        if c2 > 0.5:
-                            print('Accepted Argument: ', c1[i])
-                            arg_val.insert(i, c1[i])
-                        elif c2 < 0.5:
-                            print('Unaccepted Argument: ', c1[i])
-                            arg_val.insert(i, c1[i])
-                        elif c2 == 0.5:
-                            print('Undefined Argument: ', c1[i])
-                            arg_val.insert(i, c1[i])
-                    else:
-                        print('No Attack')
-                        att_pos.insert(i, i)
-                        pos_val.insert(i, c1[i])
-                break
+    elif c2 == r2:
+        for i in range(0, ln, 1):
+            if c1[i] != r1[i]:
+                print(c1[i], 'Attack-->', r1[i])
+                if c2 > 0.5:
+                    print('Accepted Argument: ', c1[i])
+                    arg_val.insert(i, c1[i])
+                elif c2 < 0.5:
+                    print('Unaccepted Argument: ', c1[i])
+                    arg_val.insert(i, c1[i])
+                elif c2 == 0.5:
+                    print('Undefined Argument: ', c1[i])
+                    arg_val.insert(i, c1[i])
+            else:
+                print('No Attack')
+                att_pos.insert(i, i)
+                pos_val.insert(i, c1[i])
+        
 
     same_val = np.array(pos_val)
     print('Similar Values : ', same_val)
