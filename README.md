@@ -1,35 +1,67 @@
 <h1>BasicEnsembleArgumentation</h1>
 
-<p>The BasicEnsembleArgumentation library provides methods to generate reliable results. A data set is classified by several models (classifiers). Different models produce different outputs and the produced outputs are combined by an argumentation approach. The argumentation approach produces a final output through a decision making process. The whole process follows an ensemble architecture. </p>  
+<p>The BasicEnsembleArgumentation library provides methods to generate reliable results. A data set is classified by several models (classifiers). Different models produce different outputs and the produced outputs are combined by an argumentation approach. The argumentation approach produces a final output through a decision making process. The whole process follows an ensemble architecture.
+</p>  
+
+<h2>Attacking Relation:</h2>
+
+<p>The outputs of two models (Classifier, Regressor) attack each other. An argument (a value of output set) with high probability attacks an argument that holds low probability. If the values from both output sets (Classifier, Regressor) are similar based on similar index position then they will not attack. </p>
+
+<h2>Outputs:</h2>
+<p>The library generates the following output sets. </p>
+<ul>
+  <li>Output set of Classifier model.</li>
+  <li>Output set of Regressor model.</li>
+  <li>Accepted output set of an argumentation model.</li>
+  <li>Output set of similar values based on similar index position.</li>
+  <li>Output set of similar index position based on similar values.</li>
+  <li>The graphical views of different output sets.</li>
+</ul>
+
 <h1>User Manual</h1>
 
 <p>Install Basicenssembleargumentation: </p>
 
-<code>pip install Basicenssembleargumentation</code>
+<code>pip install Basicensemblelearningargumentation</code>
 
-<p>Import the library: </p>
+![](images/step_1.PNG)
 
-![](images/c0.PNG)
+<p>Import the library package: </p>
+
+![](images/step_3.PNG)
 
 <p>Import additional pacakages: </p>
 
-![](images/c1.PNG)
+![](images/step_2.PNG)
 
-<p>Upload a data set using panda. The last column's name of the uploaded data set should be classlabel and the classlabel column should contain numerical data. </p>
+<p>Upload a data set using pandas. The data set should contain numerical data. </p>
 
-![](images/c2.PNG)
+![](images/step_4.PNG)
 
-<p>Assign the outcomes of two models into two different variables. Classifiers and Regressors functions classify the data set and predict outcomes based on classified data.</p>
+<p>Define the independent and dependant variables.</p>
 
-![](images/c3.PNG)
+![](images/step_8.PNG)
 
-<p>Insert two variables as input parameters in the Argumentation function. Argumentation function produces an outcome combining the outcomes of two models through a decision making process. The different outcomes from different models attack each other and finally the winner outcome is regarded as an outcome.  </p>
+<p>Call the two functions namely Classifiers and Regressors and instantiate the two functions into two different variables such as c1 and c2.  </p>
 
-![](images/c4.PNG)
+![](images/step_5.PNG)
 
-<p>Insert two variables as input parameters in the PlotGraph function. PlotGraph function generates different graphs for different outcomes. </p>
+<p>Call the Argumentation function with the required parameters (e.g.c1, c2). Instantiate the function in a variable (e.g. c3). </p>
 
-![](images/c5.PNG)
+![](images/step_6.PNG)
+
+<p>Call the PlotGraph function with the required parameters (e.g.c1, c2, c3). </p>
+
+![](images/step_7.PNG)
+
+<p>Call the show() function to represent the graphical views. </p>
+
+![](images/step_9.PNG)
+
+<p>The following example help the user to use the library. </p>
+
+![](images/exam_1.PNG)
+
 
 <h1>Author </h1>
 <ul><li>Istiak Ahmed</li></ul>
